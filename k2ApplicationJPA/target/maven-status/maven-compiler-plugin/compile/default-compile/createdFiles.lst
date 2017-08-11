@@ -1,0 +1,6 @@
+gestione\GestioneJPAImpiegato.class
+gestione\InterfacciaGestioneCSVImpiegato.class
+annotation\GestioneJPAImpiegato.class
+annotation\GestioneCSVImpiegato.class
+entita\Impiegato.class
+gestione\GestioneCSVImpiegato.class
