@@ -1,0 +1,4 @@
+model\Filtro.class
+rest\ServiziRest.class
+rest\Rest.class
+controller\ImpiegatoServlet.class

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="k2ApplicationWeb-0.0.1">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="k2ApplicationJPA-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/k2ApplicationJPA/k2ApplicationJPA">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="k2ApplicationEJB-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/k2ApplicationEJB/k2ApplicationEJB">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="k2ApplicationEJBClient-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/k2ApplicationEJBClient/k2ApplicationEJBClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="k2ApplicationWeb"/>
+        <property name="java-output-path" value="/k2ApplicationWeb/build/classes"/>
+    </wb-module>
+</project-modules>
