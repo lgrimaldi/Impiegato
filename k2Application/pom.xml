@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>k2Application</groupId>
+	<artifactId>k2Application</artifactId>
+	<version>0.0.1</version>
+	<packaging>ear</packaging>
+	<name>K2Application</name>
+	<dependencies>
+
+		<dependency>
+			<groupId>k2ApplicationWeb</groupId>
+			<artifactId>k2ApplicationWeb</artifactId>
+			<version>0.0.1</version>
+			<type>war</type>
+		</dependency>
+
+		<dependency>
+			<groupId>k2ApplicationEJB</groupId>
+			<artifactId>k2ApplicationEJB</artifactId>
+			<version>0.0.1</version>
+			<type>ejb</type>
+		</dependency>
+
+		<dependency>
+			<groupId>k2ApplicationEJBClient</groupId>
+			<artifactId>k2ApplicationEJBClient</artifactId>
+			<version>0.0.1</version>
+			<type>jar</type>
+		</dependency>
+
+		<dependency>
+			<groupId>k2ApplicationJPA</groupId>
+			<artifactId>k2ApplicationJPA</artifactId>
+			<version>0.0.1</version>
+			<type>jar</type>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.10</version>
+				<configuration>
+					<earSourceDirectory>EarContent</earSourceDirectory>
+					<generateApplicationXml>false</generateApplicationXml>
+					<version>6</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>1.2.0.Alpha6</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-acr-plugin</artifactId>
+				<version>1.1</version>
+				<extensions>true</extensions>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Main-Class>Main</Main-Class>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			
+		</plugins>
+	</build>
+</project>
